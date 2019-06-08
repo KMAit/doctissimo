@@ -1,0 +1,11 @@
+doctissimo_blog_homepage:
+    path:     /blog/articles/{page}
+    defaults: { _controller: DoctissimoBlogBundle:Articles:show, page : 1 }
+
+doctissimo_blog_article_details:
+    path:     /blog/article/{articleId}
+    defaults: { _controller: DoctissimoBlogBundle:Articles:details }
+
+doctissimo_blog_article_create:
+    path:     /blog/create/article
+    defaults: { _controller: DoctissimoBlogBundle:Articles:create }

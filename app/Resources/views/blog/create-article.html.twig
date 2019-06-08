@@ -1,0 +1,39 @@
+{% set current_menu = "posts" %}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Création d'un article{% endblock %}
+
+{% block body %}
+    <section role="main" class="content-body">
+        <h1 class="text-center mb-5">Création d'un article</h1>
+
+        <!-- start: page -->
+        <div class="row">
+            <div class="col-lg-12" style="margin-bottom: 1em;">
+
+                {{ form_start(articleForm) }}
+
+
+                <div class="col-md-12 text-center">
+                    <div class="col-md-3 mb-2" style="margin: 0 auto;">
+                        {{ form_row(articleForm.title) }}
+                        {{ form_errors(articleForm.title) }}
+                    </div>
+                    <div class="col-md-3" style="margin: 0 auto;">
+                        {{ form_row(articleForm.description) }}
+                        {{ form_errors(articleForm.description) }}
+                    </div>
+                </div>
+
+                <div class="text-center" style="margin-top: 1em;">
+                    {{ form_widget(articleForm.save) }}
+                </div>
+
+                {{ form_rest(articleForm) }}
+                {{ form_end(articleForm) }}
+            </div>
+        </div>
+        <!-- end: page -->
+    </section>
+{% endblock %}

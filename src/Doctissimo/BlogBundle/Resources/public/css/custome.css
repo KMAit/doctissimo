@@ -1,0 +1,11 @@
+.page-item {
+    display: inline-block;
+}
+
+ul.pagination {
+    display: inline-table;
+}
+
+.resize-none {
+    resize: none;
+}

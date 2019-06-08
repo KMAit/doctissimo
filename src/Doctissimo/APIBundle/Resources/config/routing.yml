@@ -1,0 +1,11 @@
+doctissimo_api_homepage:
+    path:     /blog/articles
+    defaults: { _controller: DoctissimoAPIBundle:API:show }
+
+doctissimo_api_article_details:
+    path:     /blog/article/{articleId}
+    defaults: { _controller: DoctissimoAPIBundle:API:details }
+
+doctissimo_api_article_create:
+    path:     /blog/create/article
+    defaults: { _controller: DoctissimoAPIBundle:API:create }

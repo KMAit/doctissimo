@@ -1,0 +1,11 @@
+doctissimo_blog:
+    resource: "@DoctissimoBlogBundle/Resources/config/routing.yml"
+    prefix:   /
+
+doctissimo_api:
+    resource: "@DoctissimoAPIBundle/Resources/config/routing.yml"
+    prefix:   /api
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation

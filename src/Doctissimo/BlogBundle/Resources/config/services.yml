@@ -1,0 +1,15 @@
+services:
+#    doctissimo_blog.example:
+#        class: Doctissimo\BlogBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+
+  doctissimo.blogManager:
+      public: true
+      class: Doctissimo\BlogBundle\Manager\ArticlesManager
+      arguments: ['@doctrine.orm.entity_manager']
+
+
+  Doctissimo\BlogBundle\Controller\:
+          resource: '../../Controller'
+          public: true
+          arguments: ['doctissimo.blogManager']

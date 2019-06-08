@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Doctissimo Test - {% block title %}{% endblock %}</title>
+        {% block stylesheets %}
+            <link href="{{ asset('bundles/doctissimoblog/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+            <link href="{{ asset('bundles/doctissimoblog/css/fontawesome.min.css') }}" rel="stylesheet" type="text/css">
+            <link href="{{ asset('bundles/doctissimoblog/css/custome.css') }}" rel="stylesheet" type="text/css">
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+    <div class="container">
+        {% block body %}{% endblock %}
+    </div>
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

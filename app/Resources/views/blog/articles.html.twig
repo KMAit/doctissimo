@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}List des articles{% endblock %}
+
+{% block body %}
+
+    <div class="row">
+        <a class="btn btn-primary btn-sm text-uppercase mt-3" href="{{ path("doctissimo_blog_article_create") }}" >Ajouter un article</a>
+    </div>
+
+    <h1 class="text-center mb-5">Liste des articles</h1>
+
+    {% if articles|length > 0 %}
+        <div class="row text-center">
+            {% for article in articles %}
+                <div class="col-md-12 mb-3">
+                    <h3 class=" mt-0 mb-15 mt-sm-20" >{{ article.title|capitalize }}</h3>
+                    <p>{{ article.description }}</p>
+                    <a class="btn btn-default btn-sm
+                    text-uppercase" href="{{ path("doctissimo_blog_article_details", {"articleId" : article.id}) }}">plus de détails</a>
+                </div>
+            {% endfor %}
+        </div>
+
+        {% include "includes/paginator.html.twig" %}
+    {% endif %}
+{% endblock %}
